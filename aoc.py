@@ -16,7 +16,7 @@ def cli(day, file):
         solve = SOLVERS[day]
     except KeyError:
         click.echo('Unimplemented!', err=True)
-        raise click.Abort
+        return
 
     solve(file)
 
