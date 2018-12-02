@@ -1,4 +1,4 @@
-from itertools import accumulate, cycle, takewhile
+from itertools import accumulate, cycle
 
 from .itertools import first_repetition, prepend
 
