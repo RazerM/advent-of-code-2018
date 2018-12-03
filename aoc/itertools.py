@@ -1,4 +1,4 @@
-from itertools import chain
+from itertools import chain, filterfalse, tee
 
 
 def first_repetition(iterable):
@@ -11,3 +11,8 @@ def first_repetition(iterable):
 
 def prepend(value, iterator):
     return chain([value], iterator)
+
+
+def partition(pred, iterable):
+    t1, t2 = tee(iterable)
+    return filterfalse(pred, t1), filter(pred, t2)

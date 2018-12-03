@@ -5,6 +5,7 @@ import aoc
 SOLVERS = {
     1: aoc.day1.solve,
     2: aoc.day2.solve,
+    3: aoc.day3.solve,
 }
 
 
