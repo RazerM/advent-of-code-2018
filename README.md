@@ -8,10 +8,19 @@ source venv/bin/activate
 pip install -e .
 ```
 
+# Download input
+
+Set the `AOC_SESSION` environment variable to the value of your
+https://adventofcode.com `session` cookie.
+
+```bash
+./aoc.py download 1 input/1.txt
+```
+
 # Running
 
 ```bash
-./aoc.py 1 input/1.txt
+./aoc.py run 1 input/1.txt
 ```
 
 # Tests

@@ -10,6 +10,8 @@ setup(
     packages=find_packages(),
     install_requires=[
         'click ~= 7.0',
+        'python-dotenv >= 0.9.1',
+        'requests ~= 2.20',
     ],
     extras_require={
         'test': [
