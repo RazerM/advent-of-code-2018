@@ -8,12 +8,12 @@ from dotenv import load_dotenv
 import aoc
 
 SOLVERS = {
-    1: aoc.day1.solve,
-    2: aoc.day2.solve,
-    3: aoc.day3.solve,
-    4: aoc.day4.solve,
-    5: aoc.day5.solve,
-    6: aoc.day6.solve,
+    1: aoc.day01.solve,
+    2: aoc.day02.solve,
+    3: aoc.day03.solve,
+    4: aoc.day04.solve,
+    5: aoc.day05.solve,
+    6: aoc.day06.solve,
 }
 
 INPUT_URL = 'https://adventofcode.com/2018/day/{day}/input'
