@@ -1,6 +1,6 @@
 import pytest
 
-from aoc.day1 import final_frequency, first_repeated_frequency
+from aoc.day01 import final_frequency, first_repeated_frequency
 
 
 @pytest.mark.parametrize('changes, frequency', [
