@@ -5,14 +5,11 @@ def sum_metadata(numbers):
     numbers = iter(numbers)
     value = 0
 
-    while True:
-        num_children = next(numbers)
-        num_metadata = next(numbers)
+    num_children = next(numbers)
+    num_metadata = next(numbers)
 
-        value += sum(sum_metadata(numbers) for _ in range(num_children))
-        value += sum(take(num_metadata, numbers))
-
-        break
+    value += sum(sum_metadata(numbers) for _ in range(num_children))
+    value += sum(take(num_metadata, numbers))
 
     return value
 
@@ -21,22 +18,19 @@ def node_value(numbers):
     numbers = iter(numbers)
     value = 0
 
-    while True:
-        num_children = next(numbers)
-        num_metadata = next(numbers)
+    num_children = next(numbers)
+    num_metadata = next(numbers)
 
-        children = [node_value(numbers) for _ in range(num_children)]
+    children = [node_value(numbers) for _ in range(num_children)]
 
-        for metadata in take(num_metadata, numbers):
-            if num_children:
-                try:
-                    value += children[metadata - 1]
-                except IndexError:
-                    pass
-            else:
-                value += metadata
-
-        break
+    for metadata in take(num_metadata, numbers):
+        if num_children:
+            try:
+                value += children[metadata - 1]
+            except IndexError:
+                pass
+        else:
+            value += metadata
 
     return value
 
