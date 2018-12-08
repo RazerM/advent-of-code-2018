@@ -3,36 +3,29 @@ from .itertools import take
 
 def sum_metadata(numbers):
     numbers = iter(numbers)
-    value = 0
 
     num_children = next(numbers)
     num_metadata = next(numbers)
 
-    value += sum(sum_metadata(numbers) for _ in range(num_children))
-    value += sum(take(num_metadata, numbers))
-
-    return value
+    return (
+        sum(sum_metadata(numbers) for _ in range(num_children)) +
+        sum(take(num_metadata, numbers))
+    )
 
 
 def node_value(numbers):
     numbers = iter(numbers)
-    value = 0
 
     num_children = next(numbers)
     num_metadata = next(numbers)
 
     children = [node_value(numbers) for _ in range(num_children)]
+    metadata = take(num_metadata, numbers)
 
-    for metadata in take(num_metadata, numbers):
-        if num_children:
-            try:
-                value += children[metadata - 1]
-            except IndexError:
-                pass
-        else:
-            value += metadata
+    if num_children:
+        return sum(children[m - 1] for m in metadata if m - 1 < len(children))
 
-    return value
+    return sum(metadata)
 
 
 def solve(file):
