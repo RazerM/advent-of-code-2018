@@ -34,5 +34,5 @@ def solve(file):
     metadata = sum_metadata(numbers)
     print('Part 1:', metadata)
 
-    metadata = node_value(numbers)
-    print('Part 2:', metadata)
+    value = node_value(numbers)
+    print('Part 2:', value)
