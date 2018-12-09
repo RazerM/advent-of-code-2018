@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='parver',
+    name='aoc',
     version='1.0',
     url='https://github.com/RazerM/advent-of-code-2018',
     author='Frazer McLean',
@@ -12,6 +12,7 @@ setup(
         'click ~= 7.0',
         'python-dotenv >= 0.9.1',
         'requests ~= 2.20',
+        'sortedcontainers ~= 2.1',
     ],
     extras_require={
         'test': [
