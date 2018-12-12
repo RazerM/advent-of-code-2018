@@ -1,3 +1,5 @@
+from collections.abc import Iterator
+
 from itertools import chain, filterfalse, islice, tee
 
 
@@ -20,3 +22,14 @@ def partition(pred, iterable):
 
 def take(n, iterable):
     return islice(iterable, n)
+
+
+def minmax(iterable):
+    if isinstance(iterable, Iterator):
+        iterable = list(iterable)
+    return min(iterable), max(iterable)
+
+
+def peak_to_peak(iterable):
+    mn, mx = minmax(iterable)
+    return mx - mn

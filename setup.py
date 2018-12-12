@@ -9,6 +9,7 @@ setup(
     license='MIT',
     packages=find_packages(),
     install_requires=[
+        'attrs ~= 18.2',
         'click ~= 7.0',
         'python-dotenv >= 0.9.1',
         'requests ~= 2.20',
