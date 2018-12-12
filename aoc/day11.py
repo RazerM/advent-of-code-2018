@@ -1,5 +1,7 @@
 from collections import deque, namedtuple
 
+from .itertools import range1
+
 Place = namedtuple('Place', 'x y size')
 
 
@@ -19,16 +21,6 @@ def calculate_power(x, y, serial_number):
     power = int(abs(power / 100 % 10))
     power -= 5
     return power
-
-
-def range1(*args):
-    if len(args) == 1:
-        return range(1, args[0] + 1)
-    elif len(args) == 2:
-        return range(args[0], args[1] + 1)
-    elif len(args) == 3:
-        return range(args[0], args[1] + 1, args[2])
-    raise TypeError('Expected 1-3 args')
 
 
 def solve(file):
