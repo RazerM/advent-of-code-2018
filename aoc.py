@@ -18,6 +18,7 @@ SOLVERS = {
     8: aoc.day08.solve,
     9: aoc.day09.solve,
     10: aoc.day10.solve,
+    11: aoc.day11.solve,
 }
 
 INPUT_URL = 'https://adventofcode.com/2018/day/{day}/input'
