@@ -23,7 +23,7 @@ def calculate_power(x, y, serial_number):
     return power
 
 
-def solve(file):
+def solve(file, verbose):
     serial_number = int(file.read())
 
     grid_size = 300

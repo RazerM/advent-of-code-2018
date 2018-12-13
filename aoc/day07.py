@@ -80,7 +80,7 @@ def parse_dependencies(lines):
     return deps
 
 
-def solve(file):
+def solve(file, verbose):
     deps = parse_dependencies(file)
 
     order, _ = calculate_step_order(deps)

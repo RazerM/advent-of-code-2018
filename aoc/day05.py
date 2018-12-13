@@ -39,7 +39,7 @@ def remove_problem_polymer(poly_chain):
     )
 
 
-def solve(file):
+def solve(file, verbose):
     poly_chain = file.read().strip()
     print('Part 1:', len(react_polymer(poly_chain)))
     print('Part 2:', len(remove_problem_polymer(poly_chain)))

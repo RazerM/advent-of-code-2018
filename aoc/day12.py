@@ -48,7 +48,7 @@ def sum_generations(state, patterns, generations):
     return new_sum
 
 
-def solve(file):
+def solve(file, verbose):
     patterns = dict()
     state = None
     for i, line in enumerate(file):

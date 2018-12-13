@@ -28,7 +28,7 @@ def node_value(numbers):
     return sum(metadata)
 
 
-def solve(file):
+def solve(file, verbose):
     numbers = [int(x) for x in file.read().split()]
 
     metadata = sum_metadata(numbers)

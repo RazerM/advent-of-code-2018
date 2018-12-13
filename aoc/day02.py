@@ -39,7 +39,7 @@ def common_letters(box_ids):
         return id1[:idx] + id1[idx + 1:]
 
 
-def solve(file):
+def solve(file, verbose):
     box_ids = [line.strip() for line in file]
 
     print('Part 1:', checksum(box_ids))

@@ -7,7 +7,7 @@ re_date = re.compile(r'\[\d{4}-\d{2}-\d{2} \d{2}:(\d{2})\] (.*)')
 re_begins = re.compile(r'Guard #(\d+) begins shift')
 
 
-def solve(file):
+def solve(file, verbose):
     guard = None
     asleep_since = None
 

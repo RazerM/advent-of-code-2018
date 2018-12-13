@@ -45,7 +45,7 @@ def find_region_size(coords):
     return in_region
 
 
-def solve(file):
+def solve(file, verbose):
     coords = []
     for line in file:
         x, y = map(int, line.split(','))

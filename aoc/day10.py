@@ -113,7 +113,7 @@ def find_message(points):
     return message, t
 
 
-def solve(file):
+def solve(file, verbose):
     points = []
     for line in file:
         px, py, vx, vy = map(int, re_pos_vel.match(line).groups())

@@ -28,7 +28,7 @@ def calculate_max_score(players, last_marble):
     return max(player_scores)
 
 
-def solve(file):
+def solve(file, verbose):
     players, last_marble = map(int, re_input.match(file.read()).groups())
 
     print('Part 1:', calculate_max_score(players, last_marble))

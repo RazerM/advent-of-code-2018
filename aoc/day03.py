@@ -5,7 +5,7 @@ from operator import itemgetter
 from .itertools import partition
 
 
-def solve(file):
+def solve(file, verbose):
     grid_claims = defaultdict(list)
 
     re_claim = re.compile(r'#(\d+) @ (\d+),(\d+): (\d+)x(\d+)')
