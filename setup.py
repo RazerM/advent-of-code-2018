@@ -14,6 +14,7 @@ setup(
         'python-dotenv >= 0.9.1',
         'requests ~= 2.20',
         'sortedcontainers ~= 2.1',
+        'tqdm ~= 4.28',
     ],
     extras_require={
         'test': [

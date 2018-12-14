@@ -21,6 +21,7 @@ SOLVERS = {
     11: aoc.day11.solve,
     12: aoc.day12.solve,
     13: aoc.day13.solve,
+    14: aoc.day14.solve,
 }
 
 INPUT_URL = 'https://adventofcode.com/2018/day/{day}/input'
@@ -34,7 +35,14 @@ def cli():
 @cli.command()
 @click.argument('day', type=click.IntRange(min=1, max=25))
 @click.argument('file', type=click.File('r'), default='-')
-@click.option('-v', '--verbose', count=True)
+@click.option(
+    '-v', '--verbose',
+    count=True,
+    help=(
+        'Typically -v will print some progress information, -vvv may spam the '
+        'screen with puzzle state.'
+    ),
+)
 def run(day, file, verbose):
     """If FILE is not passed, stdin is used instead."""
     try:

@@ -68,8 +68,9 @@ def solve(file, verbose: int):
 
     first_crash = None
     last_pos = None
+
     while not first_crash or not last_pos:
-        if verbose > 0:
+        if verbose > 2:
             for y in range(height):
                 for x in range(width):
                     for cart in carts:
